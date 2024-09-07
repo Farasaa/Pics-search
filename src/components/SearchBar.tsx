@@ -1,11 +1,11 @@
 import { useState } from "react"
 
 
-interface SearchBar{
+interface SearchBarType{
     onSubmit: (term: string) => void
 }
 
-export default function SearchBar({onSubmit}:SearchBar){
+export default function SearchBar({onSubmit}:SearchBarType){
 
     const [term, setTerm] = useState('')
 
