@@ -9,7 +9,7 @@ export default function SearchBar({onSubmit}:SearchBar){
 
     const [term, setTerm] = useState('')
 
-    function handleSubmit(event:React.FormEvent<HTMLFormElement>){
+    function handleFormSubmit(event:React.FormEvent<HTMLFormElement>){
         event.preventDefault()
         onSubmit(term)
     }
@@ -20,9 +20,13 @@ export default function SearchBar({onSubmit}:SearchBar){
   
 
     return(
-        <div>
-           <form onSubmit={handleSubmit}> 
-              <input 
+        <div className="border-4 border-gray-300 rounded-md p-2.5 mt-2.5 mb-2.5 w-1/2 mx-auto">
+           <form 
+           className="flex flex-col"
+           onSubmit={handleFormSubmit}> 
+            <label>Enter Search Term</label>
+              <input   
+              className="border-4 gray-900"
               onChange={handleChange}
               value={term}
               />

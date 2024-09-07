@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 
 const searchImages = async (term:string) => {
@@ -12,9 +12,11 @@ const searchImages = async (term:string) => {
             query: term
              
         }
-    })
 
+        
+    })
     return response.data.results
+    
 }
 
 
